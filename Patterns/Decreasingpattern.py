@@ -5,10 +5,6 @@ for i in range(0,n1):
         print('*', end='')
     print(' ')
 
-
-
-
-
 n2= int(input())
 
 for i in range(0,n2):
