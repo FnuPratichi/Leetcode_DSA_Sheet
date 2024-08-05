@@ -17,9 +17,9 @@ def reverse_function(x):
 
     if reverse_number > 2**31-1 or reverse_number < -2**31 : 
         return 0
-    if negative_flag==True:
-        reverse_number = -reverse_number
-        print("Hi",reverse_number)
+    # if negative_flag==True:
+    #     reverse_number = -reverse_number
+    #     print("Hi",reverse_number)
 
     return reverse_number
 

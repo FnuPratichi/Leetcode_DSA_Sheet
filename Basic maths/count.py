@@ -5,10 +5,6 @@ for i in user_input:
 print(count)
 
 
-N = input()
-for names in N:
-    print(names,end=' ')
-print('')
 
 
 
