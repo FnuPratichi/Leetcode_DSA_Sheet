@@ -30,9 +30,4 @@ display_names('anlku')
     fun_names(i+1,n)
 fun_names(1,5)"""
 
-def printNos(N):
-        if N < 1:
-            return
-        printNos(N-1)  
-        print(N)
-printNos(10)
+
