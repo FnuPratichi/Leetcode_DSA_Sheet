@@ -34,3 +34,6 @@ if __name__ == '__main__':
     count_freq(num_list,n)
 
 
+
+
+
