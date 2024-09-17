@@ -12,5 +12,6 @@ def maxFrequencyElements(self, nums: List[int]) -> int:
                 freq_map[num] = 1
 
         print(freq_map.values())
+maxFrequencyElements()
     
         
