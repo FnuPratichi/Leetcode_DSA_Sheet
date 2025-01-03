@@ -8,7 +8,7 @@ def solve(s):
     w2 = word[1].capitalize()
     print(w1)
     print(w2)
-    s = w1+" "+ w2
+    s = w1+""+ w2
 
     print(s)
 
