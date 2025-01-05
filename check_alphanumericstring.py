@@ -12,5 +12,7 @@ def fun(s):
     else:
         print("False")
 
-        
+
 fun('anku')
+fun('123')
+fun('@#$^&()')
