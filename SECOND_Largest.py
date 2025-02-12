@@ -12,3 +12,6 @@ print('largest number is' , largest_num)
 if num[i] > second_largest and num[i]!=largest_num:
     second_largest = num[i]
 print('second largest no is', second_largest)
+
+
+#always think like B1 --B2---B3 and see where does arr[i] can be and then assign values
