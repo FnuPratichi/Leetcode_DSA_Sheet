@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratichi | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            overflow-x: hidden;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #fdbb2d;
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #121212;
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px 20px;
+            list-style: none;
+            font-weight: bold;
+            z-index: 1000;
+        }
+
+        .nav-bar li {
+            margin-right: 20px;
+        }
+
+        .nav-bar li a {
+            color: #fdbb2d;
+            display: block;
+        }
+
+        .nav-bar li:hover {
+            background-color: #333;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .dark-mode .nav-bar li {
+            color: #fff;
+        }
+
+        .dark-mode .nav-bar li:hover {
+            color: #fdbb2d;
+        }
+
+        /* Profile Section */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 60px 20px 20px;
+            min-height: 100vh;
+        }
+
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fdbb2d;
+        }
+
+        .intro {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+        }
+
+        .intro h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 1.5em;
+            font-weight: 400;
+        }
+
+        .role {
+            font-weight: 600;
+            font-size: 1.6em;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .role span {
+            display: inline-block;
+            animation: typing 3s steps(15) 1s forwards, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Social Links */
+        .social-icons {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin-right: 15px;
+            color: #fdbb2d;
+            font-size: 1.5em;
+        }
+
+        /* Resume Section */
+        #resume {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .resume-box {
+            display: inline-block;
+            padding: 20px;
+            border: 2px solid #fdbb2d;
+            border-radius: 8px;
+            background-color: #fff;
+            margin-top: 20px;
+        }
+
+        .resume-box a {
+            padding: 10px 20px;
+            background-color: #fdbb2d;
+            color: #121212;
+            border-radius: 5px;
+            font-size: 1.2em;
+            text-transform: uppercase;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .timeline-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .timeline-container .event {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+
+        .timeline-container .event .event-title {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .timeline-container .event .event-description {
+            font-size: 1em;
+            color: #777;
+        }
+
+        .timeline-container .event::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 8px;
+            height: 100%;
+            background-color: #fdbb2d;
+            transform: translateX(-50%);
+        }
+
+        /* Projects Section */
+        .project-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .project-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .project-item {
+            margin: 20px;
+            text-align: center;
+            width: 250px;
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .project-item a {
+            display: block;
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #fdbb2d;
+            text-decoration: underline;
+        }
+
+        /* Skills Section */
+        #skills {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .skills-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .skill {
+            background-color: #fdbb2d;
+            color: #121212;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 1.2em;
+        }
+
+        /* Education Section */
+        #education {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .education-timeline {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .education-timeline .event {
+            width: 45%;
+            text-align: left;
+        }
+
+        /* Dark Mode Toggle Button */
+        #toggleMode {
+            background: #fdbb2d;
+            color: #121212;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Dark Mode Toggle Button -->
+    <button id="toggleMode">🌙 Dark Mode</button>
+
+    <!-- Navigation Bar -->
+    <ul class="nav-bar">
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#workexp">Work Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+    </ul>
+
+    <!-- Profile Section -->
+    <div class="container">
+        <div class="profile-container">
+            <img src=".jpg" alt="Profile" class="profile-img"> <!-- Replace with your image -->
+        </div>
+        <div class="intro">
+            <h1>Hello, I'm Pratichi!</h1>
+            <p>I am a <span class="role"><span>Software Engineer</span></span></p>
+            <div class="social-icons">
+                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://leetcode.com/yourusername" target="_blank"><i class="fab fa-leetcode"></i></a>
+                <a href="https://www.geeksforgeeks.org/yourusername" target="_blank"><i class="fab fa-g"></i></a>
+                <a href="https://pratichi3.medium.com" target="_blank"><i class="fab fa-medium"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <h2>Download My Resume</h2>
+        <div class="resume-box">
+            <a href="path-to-your-resume.pdf" download>Download Resume</a>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-timeline">
+            <div class="event">
+                <h3>Undergraduate</h3>
+                <p>Bachelor of Science in Computer Science</p>
+            </div>
+            <div class="event">
+                <h3>Graduate</h3>
+                <p>Master of Science in Computer Science</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-container">
+            <div class="project-item">
+                <img src="project1.jpg" alt="Project 1"> <!-- Replace with your project image -->
+                <a href="https://yourprojectdemo.com" target="_blank">Project 1 Demo</a>
+            </div>
+            <div class="project-item">
+                <img src="project2.jpg" alt="Project 2"> <!-- Replace with your project image -->
+                <a href="https://yourprojectdemo.com" target="_blank">Project 2 Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <div class="skill">Python</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">AWS</div>
+        </div>
+    </section>
+
+    <!-- Toggle Dark Mode Script -->
+    <script>
+        const toggleButton = document.getElementById('toggleMode');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                toggleButton.textContent = "☀️ Light Mode";
+            } else {
+                toggleButton.textContent = "🌙 Dark Mode";
+            }
+        });
+    </script>
+
+</body>
+</html>

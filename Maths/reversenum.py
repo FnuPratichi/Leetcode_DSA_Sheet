@@ -13,6 +13,7 @@ def reverse_function(x):
     while x!=0:
         last_digit = x % 10  # give the remainder of digit
         reverse_number = reverse_number*10 + last_digit  # appending last digit with the mul of reversed number with 10
+        print(reverse_number)  # just to check reverse value everytime
         x = x//10 # to get the integer part of the integer 
 
     if reverse_number > 2**31-1 or reverse_number < -2**31 : 
@@ -25,6 +26,6 @@ def reverse_function(x):
 
 print(reverse_function(431))
 print(reverse_function(-431))
-print(reverse_function(153478039376920987980009))
+#print(reverse_function(153478039376920987980009))
 
 
