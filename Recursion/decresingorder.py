@@ -9,8 +9,8 @@ class Solution:
 
 # Note that we can't call methods directly if we are using self. Object needs to be created
 def main():
-    ob = Solution()  # Create an instance of the Solution class
-    ob.dec_num(10)  # Call the method on the instance
+    ob = Solution()      # Create an instance of the Solution class
+    ob.dec_num(10)       # Call the method on the instance
 
 if __name__ == "__main__":
     main()

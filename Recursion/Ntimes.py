@@ -17,3 +17,4 @@ def printGfg(n):
         printGfg(n-1)
         print('GFG',end=" ")
 printGfg(10)
+
