@@ -1,0 +1,6 @@
+user_inputs = input()
+splitted_inputs = user_inputs.split()
+print(splitted_inputs)
+sorted_words = sorted(splitted_inputs)
+print(sorted_words)
+print(','.join(sorted_words))
