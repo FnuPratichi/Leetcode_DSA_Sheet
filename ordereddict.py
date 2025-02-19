@@ -8,4 +8,4 @@ new_ordered_dict = OrderedDict(new_list)
 print(new_ordered_dict)
 
 new_ordered_dict.update(my_ordered_dict)
-print(new_ordered_dict)
+print(new)
