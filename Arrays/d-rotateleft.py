@@ -16,8 +16,6 @@ def d_rotate_left(arr,d,n):
     for i in range(n-d,n):
         arr[i] = temp[i-(n-d)]
 
-        
-
 d_rotate_left(arr,d,n)
 
 print(arr)
