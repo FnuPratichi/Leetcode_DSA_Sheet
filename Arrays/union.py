@@ -12,7 +12,6 @@ def find_union(arr1,arr2):
     print(union_dict) 
 
     union = []
-
     for keys in union_dict:
         union.append(keys)
     print(union)

@@ -10,9 +10,6 @@ def max_consecutiveOnes(arr1):
             count = 0
         else:
             count = count+1
-    print(max(count_list))
-
-
-max_consecutiveOnes(arr1)
+    return max(count_list)
             
 

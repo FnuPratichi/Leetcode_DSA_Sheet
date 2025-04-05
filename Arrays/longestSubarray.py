@@ -12,3 +12,4 @@ def longest_subarray(a,k):
     print(length)
 longest_subarray(a,k)
 
+
