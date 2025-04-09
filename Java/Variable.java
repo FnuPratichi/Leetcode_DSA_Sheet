@@ -16,9 +16,13 @@ public class Variable {
         int myNum = 15;
         myNum = 20;  
         System.out.println(myNum);   // overwrite the previous value:
+        System.out.println("My num is:" + myNum);
 
+        long number = 23344569708L;
+        System.out.println("My long number is:" + number);
+
+        double num2 = 3.1456;
+        System.out.println("My double number is "+num2);
 
     }
-    
-
 }
