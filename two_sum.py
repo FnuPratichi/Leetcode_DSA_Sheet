@@ -5,6 +5,7 @@ def twoSum():
     result = []
     sum=0
     r = result.append(nums[1])
+    
     for num in nums:
         sum = r + num 
         if sum == target:

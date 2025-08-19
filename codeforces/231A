@@ -1,0 +1,11 @@
+def team(user_input):
+    count = 0
+    if sum(user_input) >= 2:
+        count = count+1
+        print(count)
+    
+if __name__ == '__main__':
+    n = int(input())
+    for i in range(0,n):
+        user = list(map(int, input().split()))
+        team(user)
